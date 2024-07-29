@@ -7,8 +7,8 @@ export const Banner = () => {
   if (isHidden) return null;
   return (
     <div
-      style={{ "--image-url": `url(${imgUrl})` }}
-      className="w-72 sm:w-full bg-[image:var(--image-url)] mt-5 h-32 rounded-lg flex flex-col items-end justify-between"
+      style={{ background: `url(${imgUrl})` }}
+      className="w-72 sm:w-full mt-5 h-32 rounded-lg flex flex-col items-end justify-between"
     >
       <button className="text-white px-3 py-1" onClick={() => setIsHidden(!isHidden)}>
         x

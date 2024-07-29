@@ -7,11 +7,10 @@ type TagListProps = {
 };
 
 export const TagList = ({ tags }: TagListProps) => {
-  const scrollRef = useRef(null);
+  const scrollRef = useRef<null | HTMLDivElement>(null);
 
   const handleScrollRight = () => {
-    console.log(scrollRef.current);
-    if (scrollRef.current) {
+    if (scrollRef.current && scrollRef.current) {
       scrollRef.current.scrollBy({
         left: -100,
         behavior: "smooth",

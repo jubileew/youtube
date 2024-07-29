@@ -15,12 +15,17 @@ export default function Home() {
   useEffect(() => {
     const initialMenu = generateIcons(10);
     const initialChannels = generateChannels(5);
-    const initialVideos = generateVideos(40);
+    // const initialVideos = generateVideos(40);
     const initialTags = generateTags(10);
+    const fetchVideos = async () => {
+      const res = await fetch("/api/videos");
+      const videoData = await res.json();
+      setVideos(videoData);
+    };
     setMenuItems(initialMenu);
     setChannels(initialChannels);
-    setVideos(initialVideos);
     setTags(initialTags);
+    fetchVideos();
   }, []);
   const [menuItems, setMenuItems] = useState<IconType[]>();
   const [channels, setChannels] = useState<ChannelType[]>();
