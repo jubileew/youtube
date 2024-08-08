@@ -1,9 +1,5 @@
+import { ChannelType } from '@/app/schemas/channels';
 import { faker } from '@faker-js/faker';
-
-export type ChannelType = {
-    avatar: string,
-    channelName: string
-}
 
 const generateChannelData = () => {
     return {

@@ -1,12 +1,5 @@
+import { VideoType } from '@/app/schemas/videos';
 import { faker } from '@faker-js/faker';
-
-export type VideoType = {
-    thumbnail: string,
-    title: string,
-    channelName: string,
-    channelAvatar: string,
-    views: number,
-}
 
 const generateVideoData = () => {
     return {

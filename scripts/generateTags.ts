@@ -1,8 +1,5 @@
+import { TagType } from '@/app/schemas/tags';
 import { faker } from '@faker-js/faker';
-
-export type TagType = {
-    text: string
-}
 
 const generateTagData = () => {
     return {

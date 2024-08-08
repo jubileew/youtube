@@ -1,4 +1,4 @@
-import type { VideoType } from "../scripts/generateVideos";
+import { VideoType } from "@/app/schemas/videos";
 
 type VideoProps = {
   data: VideoType;

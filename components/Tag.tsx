@@ -1,4 +1,4 @@
-import type { TagType } from "../scripts/generateTags";
+import { TagType } from "@/app/schemas/tags";
 
 type TagProps = {
   data?: TagType;

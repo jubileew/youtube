@@ -8,19 +8,16 @@ export const Searchbar = () => {
     <div className="flex items-center gap-2 justify-center relative w-[60%]">
       <div className="flex px-2 relative">
         <div
-          className={`flex flex-1 overflow-hidden rounded-l-full border-gray-100 border-2 p-1 text-sm h-9`}
-          style={{ transformOrigin: "right" }}
+          className={`flex overflow-hidden relative rounded-l-full border-gray-100 border-2 p-1 text-sm h-9 w-80 ${isFocused ? "pl-4" : ""}`}
+          style={{ transformOrigin: "left" }}
         >
-          {isFocused && (
-            <FontAwesomeIcon
-              className="h-4 w-4 pl-3 pr-1 self-center hover:cursor-pointer "
-              icon={faSearch}
-              style={{ color: "#4b5563" }}
-            />
-          )}
+          <FontAwesomeIcon
+            className={`h-4 w-4  self-center hover:cursor-pointer ${!isFocused ? "hidden" : "" }`}
+            icon={faSearch}
+            style={{ color: "#4b5563" }}
+          />
           <input
-            className={`md:w-[30vw] w-[10vw] focus:outline-none indent-3 `}
-            style={{ transformOrigin: "right" }}
+            className={`md:w-[30vw] w-[10vw] focus:outline-none indent-3`}
             placeholder="Search"
             onFocus={() => setIsFocused(true)}
             onBlur={() => setIsFocused(false)}

@@ -1,8 +1,5 @@
+import { IconType } from '@/app/schemas/icons';
 import { faker } from '@faker-js/faker';
-
-export type IconType = {
-    text: string
-}
 
 const generateIconData = () => {
     return {

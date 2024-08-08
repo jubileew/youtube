@@ -1,4 +1,4 @@
-import { IconType } from "@/scripts/generateIcons";
+import { IconType } from "@/app/schemas/icons";
 import { MenuItem } from "./MenuItem";
 
 type MenuItemListProps = {

@@ -1,5 +1,5 @@
+import { IconType } from "@/app/schemas/icons";
 import { useMenuContext } from "@/context/MenuMinimizedContext";
-import type { IconType } from "../scripts/generateIcons";
 
 type MenuItemProps = {
   data: IconType;

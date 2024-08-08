@@ -1,4 +1,4 @@
-import { ChannelType } from "@/scripts/generateChannels";
+import { ChannelType } from "@/app/schemas/channels";
 import { Channel } from "./Channel";
 
 type ChannelListProps = {

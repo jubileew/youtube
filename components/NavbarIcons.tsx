@@ -1,12 +1,15 @@
-import { generateChannels } from "@/scripts/generateChannels";
-import { useEffect, useState } from "react";
+import { useData } from "@/app/hooks/useData";
+import { channelArraySchema } from "@/app/schemas/channels";
 
 export const NavbarIcons = () => {
-  useEffect(() => {
-    const initialAvatar = generateChannels(1)[0].avatar;
-    setAvatar(initialAvatar);
-  },[]);
-  const [avatar, setAvatar] = useState("");
+  const { data, error, isLoading } = useData({
+    path: "channels",
+    schema: channelArraySchema,
+  });
+
+  if (isLoading) return <div></div>;
+  if (!isLoading && error) return <div>An error occurred</div>;
+
   return (
     <div className="flex justify-center items-center space-x-4">
       {Array.from({ length: 3 }, (_, ind) => (
@@ -20,7 +23,7 @@ export const NavbarIcons = () => {
       ))}
 
       <img
-        src={avatar}
+        src={data[0].avatar}
         alt="channel logo"
         style={{ clipPath: "circle()" }}
         width={25}

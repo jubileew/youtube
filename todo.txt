@@ -1,1 +1,5 @@
 - run prettier
+- pagination for videos
+- tailwind merge to show search icon (use hidden or visible) on focus, add or remove padding so width of search bar will be the same
+- do sidebar and search bar from scratch
+- how to not reload sidebar text and channels every time
